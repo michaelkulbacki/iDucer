@@ -1,0 +1,7 @@
+CHANGED,C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceScanActivity$override.class
+CHANGED,C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceScanActivity$ViewHolder$override.class
+CHANGED,C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceScanActivity$1$override.class
+CHANGED,C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceScanActivity$2$1$override.class
+CHANGED,C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceScanActivity$2$override.class
+CHANGED,C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceScanActivity$LeDeviceListAdapter$override.class
+CHANGED,C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class

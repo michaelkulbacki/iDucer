@@ -1,0 +1,153 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:3:1-40:12
+	package
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:4:5-50
+	android:versionName
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:6:5-30
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:5:5-28
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:3:11-69
+uses-feature#android.hardware.bluetooth_le
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:14:5-89
+	android:required
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:14:64-87
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:14:19-63
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:15:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:16:22-78
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:17:5-67
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:17:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:18:5-73
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:18:22-71
+application
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:20:5-38:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\design\23.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v13:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:20:18-40
+	android:icon
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:21:9-45
+	android:theme
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:22:9-60
+activity#com.example.android.bluetoothlegatt.DeviceScanActivity
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:24:9-30:20
+	android:label
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:25:13-35
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:24:19-53
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:26:13-29:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:27:17-68
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:27:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:28:17-76
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:28:27-74
+activity#com.example.android.bluetoothlegatt.DeviceControlActivity
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:31:9-58
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:31:19-56
+activity#com.example.android.bluetoothlegatt.MainActivity
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:32:9-50
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:32:19-47
+service#com.example.android.bluetoothlegatt.BluetoothLeService
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:33:9-77
+	android:enabled
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:33:53-75
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:33:18-52
+meta-data#com.google.android.gms.version
+ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:35:9-37:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:37:13-66
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml:36:13-58
+uses-sdk
+INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\design\23.1.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v13:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\iDucer\Application\src\main\AndroidManifest.xml
