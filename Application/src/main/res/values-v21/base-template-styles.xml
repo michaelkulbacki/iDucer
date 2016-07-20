@@ -19,6 +19,8 @@
 
     <!-- Activity themes -->
     <style name="Theme.Base" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primaryaccent</item>
     </style>
 
 </resources>

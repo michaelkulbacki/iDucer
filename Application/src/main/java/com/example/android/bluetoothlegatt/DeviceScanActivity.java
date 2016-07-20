@@ -24,8 +24,10 @@ import android.bluetooth.BluetoothManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,8 +47,12 @@ import java.util.jar.Manifest;
 public class DeviceScanActivity extends ListActivity {
     private LeDeviceListAdapter mLeDeviceListAdapter;
     private BluetoothAdapter mBluetoothAdapter;
+    private Location mLocationAdapter;
     private boolean mScanning;
     private Handler mHandler;
+
+    private static final String TAG = "DeviceNameActivity";
+    private static final String DEVICE_NAME = "GP:50 0234567";
 
     private static final int REQUEST_ENABLE_BT = 1;
     // Stops scanning after 11 seconds.
@@ -241,7 +247,7 @@ public class DeviceScanActivity extends ListActivity {
                 viewHolder.deviceName.setText(deviceName);
             else
                 viewHolder.deviceName.setText(R.string.unknown_device);
-            viewHolder.deviceAddress.setText(device.getAddress());
+                viewHolder.deviceAddress.setText(device.getAddress());
 
             return view;
         }
@@ -256,8 +262,14 @@ public class DeviceScanActivity extends ListActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mLeDeviceListAdapter.addDevice(device);
-                    mLeDeviceListAdapter.notifyDataSetChanged();
+                    if(device.getName() != null) {
+                        if (device.getName().contains("GP:50")) {
+                            mLeDeviceListAdapter.addDevice(device);
+                            mLeDeviceListAdapter.notifyDataSetChanged();
+                            //Update the overflow menu
+                            invalidateOptionsMenu();
+                        }
+                    }
                 }
             });
         }

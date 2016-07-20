@@ -180,6 +180,10 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\drawable-hdpi\\common_full_open_on_phone.png"
     },
     {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bluetooth.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-hdpi\\bluetooth.png"
+    },
+    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },

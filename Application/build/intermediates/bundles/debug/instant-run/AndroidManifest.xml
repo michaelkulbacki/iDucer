@@ -30,8 +30,7 @@
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:icon="@drawable/ic_launcher"
         android:label="iDucer"
-        android:theme="@android:style/Theme.Material.Light" >
-        android:actionBarStyle="
+        android:theme="@android:style/Theme.Material.Light.DarkActionBar" >
         <activity
             android:name="com.example.android.bluetoothlegatt.DeviceScanActivity"
             android:label="iDucer" >
@@ -42,15 +41,11 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.bluetoothlegatt.DeviceControlActivity" />
-        <activity android:name="com.example.android.bluetoothlegatt.MainActivity" />
 
         <service
             android:name="com.example.android.bluetoothlegatt.BluetoothLeService"
             android:enabled="true" />
-        <!--
- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
