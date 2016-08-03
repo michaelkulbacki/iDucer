@@ -1,3 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_27a6e856fe48fcb83263413069ecf71eb1fdedc7\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.3.0_122112def36af5a73e9fa30dcd9661b3c383d24c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.3.0_0600b6499096b91606008a2c7367f0664f0ad413\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.0_83b876700565d5f2f5868183b6f98877dff9e8ad\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.3.0_9b41ce3ba3fe92c2abd218a2591efcfb92b7f48a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.0_d13a04bd20d0eb685633ee016115beb4fb06b6c1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8813bdcf7583107c4873150075d17c8072ec50cf">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.3.0_8adf5bf03b1f51bcdecfc35e3f3edd5d7aeba07a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="acf7cf51df167b770cfba5f01e312f7cc62d1f75">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2ea6b11657608d3b11fe0934686b19fbd869e301\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.1.0_9e23316637a5b68ffa8ec7c5aa736b8c694f0014\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.3.0_4f24e795ee093ec8f104d3c79364e37eb60426b5\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a809555a2599054c3dcd1bf82b089315ac3a11df">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-23.3.0_429bf98878ca05ec03fbb819ac3df00ec1468e62\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.3.0_2d8f0b509961344972b775c263f47f854c6a8055\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.3.0_2456f6b95e11ede3325cbf111c118cc193fc60f8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="cf042ceb6c83976027655b492af97f509f188e7d">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0bc2a70f09a33be9a320a5f2cc7286930430b977\classes.dex" />
+    </item>
+
+</items>

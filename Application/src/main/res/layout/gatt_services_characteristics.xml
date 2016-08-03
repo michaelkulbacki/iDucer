@@ -1,196 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:measureWithLargestChild="false"
-    android:transitionGroup="true">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:maxLines="5"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/data_value"
-            android:text="--"
-            android:layout_weight="0.98"
-            android:layout_gravity="center_horizontal"
-            android:textSize="40dp"
-            android:paddingLeft="0dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"/>
-    </LinearLayout>
-<LinearLayout
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:maxLines="5"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/text_temperature"
-        android:text="--"
-        android:layout_weight="0.98"
-        android:layout_gravity="center_horizontal"
-        android:textSize="40dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"/>
-</LinearLayout>
-
-
-    <LinearLayout android:orientation="horizontal"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:visibility="gone">
-        <TextView android:layout_width="wrap_content"
+        android:layout_margin="0dp"
+        android:measureWithLargestChild="false"
+        android:transitionGroup="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:maxLines="1"
+                android:gravity="start"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Sensor Information:"
+                android:layout_weight="0.98"
+                android:textSize="13sp"
+                android:paddingStart="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:background="#dc1e2b"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:maxLines="5"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/text_pressure"
+                android:text="@string/no_data"
+                android:layout_weight="0.98"
+                android:layout_gravity="center_horizontal"
+                android:textSize="40sp"
+                android:paddingStart="0dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:maxLines="5"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/text_temperature"
+                android:text="@string/no_data"
+                android:layout_weight="0.98"
+                android:layout_gravity="center_horizontal"
+                android:textSize="40sp"
+                android:paddingStart="0dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_device_address"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:visibility="gone" />
-        <Space android:layout_width="5dp"
-            android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/device_address"
+            android:layout_margin="10dp"
+            android:visibility="gone">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_device_address"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:visibility="gone" />
+
+            <Space android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/device_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_state"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:visibility="gone" />
+
+            <TextView android:id="@+id/connection_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disconnected"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp" />
-    </LinearLayout>
-    <!-- <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="18dp">
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp">
 
-        <Button
-            android:layout_width="156dp"
-            android:layout_height="wrap_content"
-            android:text="Pressure"
-            android:id="@+id/Pressure"
-            android:onClick="onClickPressure"
-            android:checked="false"
-            style="@android:style/Widget.Material.ButtonBar"
-            android:background="#ed2121"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp" />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery: "
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="5dp" />
 
-        <Button
-            android:layout_width="156dp"
-            android:layout_height="wrap_content"
-            android:text="Temperature"
-            android:id="@+id/Temperature"
-            android:onClick="onClickTemp"
-            android:checked="false"
-            style="@android:style/Widget.Material.ButtonBar"
-            android:background="#ed2121"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-    </LinearLayout> -->
+            <Space android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
 
-    <LinearLayout android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_state"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:visibility="gone" />
+            <TextView android:id="@+id/text_battery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                android:textSize="17sp" />
 
-        <TextView android:id="@+id/connection_state"
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pressure Range: "
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="5dp" />
+
+            <Space android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/text_pressureR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="40px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:maxLines="1"
+                android:gravity="start"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Device Information:"
+                android:layout_weight="0.98"
+                android:textSize="13sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:background="#dc1e2b"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="40px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manufacturer: "
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="5dp" />
+
+            <Space android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/manufactuer_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Serial Number: "
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="5dp" />
+
+            <Space android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/serial_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Model Number: "
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="5dp" />
+
+            <Space android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/model_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="40px" />
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/disconnected"
-            android:textSize="18sp"
-            android:visibility="gone" />
-    </LinearLayout>
-    <LinearLayout android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#000">
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_data"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:visibility="gone" />
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="20dp">
 
-        <TextView android:id="@+id/dataa_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/no_data"
-            android:textSize="17sp"
-            android:visibility="gone" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Manufacturer: "
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:layout_marginLeft="5dp" />
-        <Space android:layout_width="5dp"
-            android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/manufactuer_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/no_data"
-            android:textSize="17sp" />
-    </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/gp50"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/imageView"
+                android:baselineAlignBottom="true"
+                android:adjustViewBounds="true" />
 
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Model Number: "
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:layout_marginLeft="5dp" />
-        <Space android:layout_width="5dp"
-            android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/model_num"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/no_data"
-            android:textSize="17sp" />
+        </RelativeLayout>
     </LinearLayout>
-    <!-- <ExpandableListView android:id="@+id/gatt_services_list"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:stackFromBottom="false"
-        android:smoothScrollbar="false"
-        android:scrollingCache="true"
-        android:textFilterEnabled="false"
-        android:touchscreenBlocksFocus="false"
-        android:footerDividersEnabled="false"
-        android:elevation="0dp"
-        android:drawSelectorOnTop="true"
-        android:focusableInTouchMode="false"
-        android:longClickable="false"
-        tools:listitem="@android:layout/simple_expandable_list_item_1"
-        android:childDivider="#7c7c7c" /> -->
-</LinearLayout>
+</ScrollView>
