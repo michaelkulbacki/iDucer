@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="23"
+        android:minSdkVersion="21"
         android:targetSdkVersion="23" />
 
     <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
@@ -31,12 +31,20 @@
         android:label="iDucer"
         android:theme="@android:style/Theme.Material.Light.DarkActionBar" >
         <activity
-            android:name="com.example.android.bluetoothlegatt.DeviceScanActivity"
-            android:label="iDucer" >
+            android:name="com.example.android.bluetoothlegatt.SplashActivity"
+            android:label="iDucer"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.bluetoothlegatt.DeviceScanActivity"
+            android:label="iDucer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINACTIVITY" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.bluetoothlegatt.DeviceControlActivity" />

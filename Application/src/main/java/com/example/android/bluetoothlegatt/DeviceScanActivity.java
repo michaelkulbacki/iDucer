@@ -42,7 +42,7 @@ public class DeviceScanActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setTitle("iDucer");
+        getActionBar().setTitle("Sensors");
         mHandler = new Handler();
 
         // Use this check to determine whether BLE is supported on the device.  Then you can

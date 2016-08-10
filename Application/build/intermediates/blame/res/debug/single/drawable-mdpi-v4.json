@@ -36,6 +36,10 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\splash.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-mdpi\\splash.png"
+    },
+    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
@@ -88,6 +92,10 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\gp50.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-mdpi\\gp50.png"
+    },
+    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     },
@@ -134,6 +142,10 @@
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tempr.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-mdpi\\tempr.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png",

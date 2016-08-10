@@ -64,6 +64,10 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-xhdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\gp50.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-xhdpi\\gp50.png"
+    },
+    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
@@ -180,6 +184,10 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\splash.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-xhdpi\\splash.png"
+    },
+    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -190,6 +198,10 @@
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tempr.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-xhdpi\\tempr.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",

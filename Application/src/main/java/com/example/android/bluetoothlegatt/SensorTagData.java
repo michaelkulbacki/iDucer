@@ -1,16 +1,14 @@
 package com.example.android.bluetoothlegatt;
 
 import android.bluetooth.BluetoothGattCharacteristic;
-import android.hardware.Sensor;
 import android.util.Log;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-
-
 public class SensorTagData {
     private final static String TAG = SensorTagData.class.getSimpleName();
+
     public static String extractTemperature(BluetoothGattCharacteristic characteristic) {
         final byte[] data = characteristic.getValue();
         String tempADC = "";
@@ -48,9 +46,21 @@ public class SensorTagData {
             f = calculatePressure(d.final_zero, d.final_pressR, d.final_fso, f);
             BigDecimal result = roundFloat(f, 2);     // rounds to 2 decimal points
             String str = result.toString();
-            return str +" PSIg";
+            return str;
         }
         return "Error getting Pressure";
+    }
+
+    public static String extractString(BluetoothGattCharacteristic characteristic){
+        final byte[] data = characteristic.getValue();
+        String temp = "";
+        if (data != null && data.length > 0) {
+            temp = stringBuilder(characteristic);       // builds string of numbers
+            temp = temp.replaceAll("\\s+","");          // removes spaces in string
+
+            return hexToString(temp);                   // converts string into ASCII
+        }
+        return "Error";
     }
 
     /* -----------------Personal Helper Methods------------------- */
@@ -82,6 +92,15 @@ public class SensorTagData {
             stringBuilder.append(String.format("%02X ", byteChar));
         str = stringBuilder.toString();
         return str;
+    }
+
+    public static String hexToString(String hex) {
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < hex.length(); i+=2) {
+            String str = hex.substring(i, i+2);
+            output.append((char)Integer.parseInt(str, 16));
+        }
+        return output.toString();
     }
 
     public static float stringToFloat(String str){

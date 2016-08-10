@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"> -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_margin="10dp">
+    android:theme="@android:style/Theme.Material.Light.DarkActionBar"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="70dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1.80"
-        android:padding="10dp">
+        android:padding="8dp">
 
         <ImageView
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:src="@drawable/tempr"
-            android:padding="6dp" />
+            android:padding="3dp" />
 
         <TextView android:id="@+id/device_address"
             android:layout_width="match_parent"
@@ -39,3 +44,4 @@
     </LinearLayout>
 
 </LinearLayout>
+

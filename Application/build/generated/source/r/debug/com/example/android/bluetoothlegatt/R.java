@@ -2262,9 +2262,10 @@ containing a value of this type.
         public static final int gp50=0x7f02004f;
         public static final int gp50oo=0x7f020050;
         public static final int ic_launcher=0x7f020051;
-        public static final int notification_template_icon_bg=0x7f020054;
-        public static final int tempr=0x7f020052;
-        public static final int tile=0x7f020053;
+        public static final int notification_template_icon_bg=0x7f020055;
+        public static final int splash=0x7f020052;
+        public static final int tempr=0x7f020053;
+        public static final int tile=0x7f020054;
     }
     public static final class id {
         public static final int action0=0x7f0b007d;
@@ -2339,11 +2340,11 @@ containing a value of this type.
         public static final int list_item=0x7f0b0043;
         public static final int manufactuer_value=0x7f0b0078;
         public static final int media_actions=0x7f0b0080;
-        public static final int menu_connect=0x7f0b008b;
-        public static final int menu_disconnect=0x7f0b008c;
-        public static final int menu_refresh=0x7f0b008a;
-        public static final int menu_scan=0x7f0b008d;
-        public static final int menu_stop=0x7f0b008e;
+        public static final int menu_connect=0x7f0b008c;
+        public static final int menu_disconnect=0x7f0b008d;
+        public static final int menu_refresh=0x7f0b008b;
+        public static final int menu_scan=0x7f0b008e;
+        public static final int menu_stop=0x7f0b008f;
         public static final int middle=0x7f0b0032;
         public static final int mini=0x7f0b0030;
         public static final int model_num=0x7f0b007a;
@@ -2385,6 +2386,7 @@ containing a value of this type.
         public static final int snackbar_text=0x7f0b006b;
         public static final int snap=0x7f0b0019;
         public static final int spacer=0x7f0b0047;
+        public static final int splashscreen=0x7f0b008a;
         public static final int split_action_bar=0x7f0b0008;
         public static final int src_atop=0x7f0b0029;
         public static final int src_in=0x7f0b002a;
@@ -2471,7 +2473,8 @@ containing a value of this type.
         public static final int select_dialog_item_material=0x7f03002f;
         public static final int select_dialog_multichoice_material=0x7f030030;
         public static final int select_dialog_singlechoice_material=0x7f030031;
-        public static final int support_simple_spinner_dropdown_item=0x7f030032;
+        public static final int splash_screen=0x7f030032;
+        public static final int support_simple_spinner_dropdown_item=0x7f030033;
     }
     public static final class menu {
         public static final int gatt_services=0x7f0c0000;

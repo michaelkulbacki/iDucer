@@ -68,6 +68,10 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\splash.png",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\src\\main\\res\\drawable-hdpi\\splash.png"
+    },
+    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\iDucer\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },

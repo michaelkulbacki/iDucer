@@ -40,43 +40,42 @@ public class DeviceControlActivity extends Activity {
     public static final String EXTRAS_DEVICE_NAME = "DEVICE_NAME";
     public static final String EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS";
 
+    /* Device Information */
+    private static final UUID DEVICE_INFO_SERVICE = UUID.fromString("0000180a-0000-1000-8000-00805f9b34fb");
+    private static final UUID MODEL_NUM = UUID.fromString("00002a24-0000-1000-8000-00805f9b34fb");
+
     /* Battery Service */
-    private static final UUID BATTERY_SERVICE = UUID.fromString("0000180f-0000-1000-8000-00805f9b34fb");      //
-    private static final UUID BATTERY_DATA_CHAR = UUID.fromString("00002a19-0000-1000-8000-00805f9b34fb");    //
+    private static final UUID BATTERY_SERVICE = UUID.fromString("0000180f-0000-1000-8000-00805f9b34fb");
+    private static final UUID BATTERY_DATA_CHAR = UUID.fromString("00002a19-0000-1000-8000-00805f9b34fb");
 
     /* Pressure Service */
-    private static final UUID PRESSURE_SERVICE = UUID.fromString("a6322521-eb79-4b9f-9152-19daa4870418");      //
-    private static final UUID PRESSURE_DATA_CHAR = UUID.fromString("f90ea017-f673-45b8-b00b-16a088a2ed61");    //
-    private static final UUID PRESSURE_RANGE_DATA_CHAR = UUID.fromString("797b3a40-0ea1-11e4-9f5a-0002a5d5c51b");//
-    private static final UUID FULL_SCALE_OUTPUT_CHAR = UUID.fromString("4ee0e280-230f-11e4-ad5b-0002a5d5c51b");  //
-    private static final UUID ZERO_OUTPUT_CHAR = UUID.fromString("70189ba0-230f-11e4-bcf2-0002a5d5c51b");      //
-
+    private static final UUID PRESSURE_SERVICE = UUID.fromString("a6322521-eb79-4b9f-9152-19daa4870418");
+    private static final UUID PRESSURE_DATA_CHAR = UUID.fromString("f90ea017-f673-45b8-b00b-16a088a2ed61");
+    private static final UUID PRESSURE_RANGE_DATA_CHAR = UUID.fromString("797b3a40-0ea1-11e4-9f5a-0002a5d5c51b");
+    private static final UUID FULL_SCALE_OUTPUT_CHAR = UUID.fromString("4ee0e280-230f-11e4-ad5b-0002a5d5c51b");
+    private static final UUID ZERO_OUTPUT_CHAR = UUID.fromString("70189ba0-230f-11e4-bcf2-0002a5d5c51b");
+    private static final UUID PRESSURE_UNITS = UUID.fromString("88d91836-188c-4944-a11a-3252d189b7ca");
     public static float final_pressR, final_fso, final_zero;
 
     /* Temperature */
-    private static final UUID TEMPERATURE_DATA_CHAR = UUID.fromString("79ed3826-3cbb-4881-bbf9-410f1b18dc9c"); //
+    private static final UUID TEMPERATURE_DATA_CHAR = UUID.fromString("79ed3826-3cbb-4881-bbf9-410f1b18dc9c");
 
     /* Client Configuration Descriptor */
-    private static final UUID CONFIG_DESCRIPTOR = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb"); //
+    private static final UUID CONFIG_DESCRIPTOR = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
 
-    private TextView mManufact, mModelNum, mSerial;
-    private TextView mTemperature, mPressure, mBattery, mPressureR;
-    private String mDeviceAddress;
+    public final static String ACTION_GATT_CONNECTED = "com.example.bluetooth.le.ACTION_GATT_CONNECTED";
+    public final static String ACTION_GATT_DISCONNECTED = "com.example.bluetooth.le.ACTION_GATT_DISCONNECTED";
+    public final static String ACTION_GATT_SERVICES_DISCOVERED = "com.example.bluetooth.le.ACTION_GATT_SERVICES_DISCOVERED";
 
-    public final static String ACTION_GATT_CONNECTED =
-            "com.example.bluetooth.le.ACTION_GATT_CONNECTED";
-    public final static String ACTION_GATT_DISCONNECTED =
-            "com.example.bluetooth.le.ACTION_GATT_DISCONNECTED";
-    public final static String ACTION_GATT_SERVICES_DISCOVERED =
-            "com.example.bluetooth.le.ACTION_GATT_SERVICES_DISCOVERED";
-
+    private TextView mManufact, mModelNum, mSerial, mTemperature, mPressure, mBattery, mPressureR;
+    public String model_string, units_string;
     private BluetoothLeService mBluetoothLeService;
+    private BluetoothManager mBluetoothManager;
+    private BluetoothAdapter mBluetoothAdapter;
+    private BluetoothGatt mConnectedGatt;
     private ProgressDialog mProgress;
     private SparseArray<BluetoothDevice> mDevices;
-    private BluetoothGatt mConnectedGatt;
-    private BluetoothManager mBluetoothManager;
-    private String mBluetoothDeviceAddress;
-    private BluetoothAdapter mBluetoothAdapter;
+    private String mBluetoothDeviceAddress, mDeviceAddress;
     private boolean mConnected = false;
 
     /**
@@ -169,7 +168,6 @@ public class DeviceControlActivity extends Activity {
         BluetoothLeService service = new BluetoothLeService();
         mManufact.setText(mDeviceName.substring(0,5));
         mSerial.setText(mDeviceName.substring(6));
-        mModelNum.setText(service.getModelNum("7200-BLEE"));
 
         getActionBar().setTitle("Measurements");
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -274,15 +272,14 @@ public class DeviceControlActivity extends Activity {
     }
 
     private void clearDisplayValues() {
-        mTemperature.setText("---");
-        mPressureR.setText("---");
-        mBattery.setText("---");
-        mPressure.setText("---");
-        mManufact.setText("---");
-        mModelNum.setText("---");
-        mSerial.setText("---");
+        mTemperature.setText("No Data");
+        mPressureR.setText("No Data");
+        mBattery.setText("No Data");
+        mPressure.setText("No Data");
+        mManufact.setText("No Data");
+        mModelNum.setText("No Data");
+        mSerial.setText("No Data");
     }
-
     /*
  * In this callback, we've created a bit of a state machine to enforce that only
  * one characteristic be read or written at a time until all of our sensors
@@ -291,7 +288,7 @@ public class DeviceControlActivity extends Activity {
     public BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
 
         /* State Machine Tracking */
-        private int mState = 0;
+        public int bState, mNState, mState, pRState, pUState = 0;
 
         public void reset() { mState = 0; }
 
@@ -304,32 +301,34 @@ public class DeviceControlActivity extends Activity {
             BluetoothGattCharacteristic characteristic;
             switch (mState) {
                 case 0:
-                    //Log.d(TAG, "Reading temperature...");
-                    characteristic = gatt.getService(PRESSURE_SERVICE)
-                            .getCharacteristic(TEMPERATURE_DATA_CHAR);
-                    break;
-                case 1:
-                    //Log.d(TAG, "Reading battery...");
                     characteristic = gatt.getService(BATTERY_SERVICE)
                             .getCharacteristic(BATTERY_DATA_CHAR);
                     break;
+                case 1:
+                    characteristic = gatt.getService(PRESSURE_SERVICE)
+                            .getCharacteristic(PRESSURE_UNITS);
+                    break;
                 case 2:
-                    //Log.d(TAG, "Reading Range Data...");
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(PRESSURE_RANGE_DATA_CHAR);
                     break;
                 case 3:
-                    //Log.d(TAG, "Reading FSO...");
+                    characteristic = gatt.getService(DEVICE_INFO_SERVICE)
+                            .getCharacteristic(MODEL_NUM);
+                    break;
+                case 4:
+                    characteristic = gatt.getService(PRESSURE_SERVICE)
+                            .getCharacteristic(TEMPERATURE_DATA_CHAR);
+                    break;
+                case 5:
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(FULL_SCALE_OUTPUT_CHAR);
                     break;
-                case 4:
-                    //Log.d(TAG, "Reading Zero Output...");
+                case 6:
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(ZERO_OUTPUT_CHAR);
                     break;
-                case 5:
-                    //Log.d(TAG, "Reading pressure...");
+                case 7:
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(PRESSURE_DATA_CHAR);
                     break;
@@ -346,40 +345,44 @@ public class DeviceControlActivity extends Activity {
          * by writing the ENABLE_NOTIFICATION_VALUE flag to that characteristic's
          * configuration descriptor.
          */
+
         private void setNotifyNextSensor(BluetoothGatt gatt) {
-            BluetoothGattCharacteristic characteristic, tChar, pChar;
-            //int tpState = 0;
+            BluetoothGattCharacteristic characteristic;
             switch (mState) {
                 case 0:
-                    //Log.d(TAG, "Set notify temperature..");
-                    characteristic = gatt.getService(PRESSURE_SERVICE)
-                            .getCharacteristic(TEMPERATURE_DATA_CHAR);
-                    break;
-                case 1:
-                    //Log.d(TAG, "Set notify battery...");
                     characteristic = gatt.getService(BATTERY_SERVICE)
                             .getCharacteristic(BATTERY_DATA_CHAR);
                     break;
+                case 1:
+                    characteristic = gatt.getService(PRESSURE_SERVICE)
+                            .getCharacteristic(PRESSURE_UNITS);
+                    units_string = SensorTagData.extractString(characteristic);
+                    break;
                 case 2:
-                    //Log.d(TAG, "Set notify Range Data...");
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(PRESSURE_RANGE_DATA_CHAR);
                     final_pressR = SensorTagData.calculatePressureVars(characteristic);
                     break;
                 case 3:
-                    //Log.d(TAG, "Set notify Full Scale Output...");
+                    characteristic = gatt.getService(DEVICE_INFO_SERVICE)
+                            .getCharacteristic(MODEL_NUM);
+                    model_string = SensorTagData.extractString(characteristic);
+                    break;
+                case 4:
+                    characteristic = gatt.getService(PRESSURE_SERVICE)
+                            .getCharacteristic(TEMPERATURE_DATA_CHAR);
+                    break;
+                case 5:
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(FULL_SCALE_OUTPUT_CHAR);
                     final_fso = SensorTagData.calculatePressureVars(characteristic);
                     break;
-                case 4:
-                    //Log.d(TAG, "Set notify Zero Output...");
+                case 6:
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(ZERO_OUTPUT_CHAR);
                     final_zero = SensorTagData.calculatePressureVars(characteristic);
                     break;
-                case 5:
-                    //Log.d(TAG, "Set notify pressure....");
+                case 7:
                     characteristic = gatt.getService(PRESSURE_SERVICE)
                             .getCharacteristic(PRESSURE_DATA_CHAR);
                     break;
@@ -388,21 +391,16 @@ public class DeviceControlActivity extends Activity {
                     Log.i(TAG, "All Sensors Enabled");
                     return;
             }
-            if(mState == 0 || mState == 5) {
+            if(mState == 4 || mState == 7) {
                 gatt.setCharacteristicNotification(characteristic, true);
                 BluetoothGattDescriptor desc = characteristic.getDescriptor(CONFIG_DESCRIPTOR);
                 desc.setValue(BluetoothGattDescriptor.ENABLE_INDICATION_VALUE); // use notify or indicate
                 gatt.writeDescriptor(desc);
-                if(mState == 5){
-                    /*try {
-                        Thread.sleep(1000);                 //1000 milliseconds is one second.
-                    } catch(InterruptedException ex) {
-                        Thread.currentThread().interrupt();
-                    }*/
+                if(mState == 7){
                     reset();
                 }
             }
-            if(mState != 0 && mState != 5) {advance(); readNextSensor(gatt);}
+            if(mState != 4 && mState != 7) {advance(); readNextSensor(gatt);}
         }
 
         @Override
@@ -459,17 +457,36 @@ public class DeviceControlActivity extends Activity {
         @Override
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
             //For each read, pass the data up to the UI thread to update the display
+            //Preventing static values from being read unnecessarily
             if (BATTERY_DATA_CHAR.equals(characteristic.getUuid())) {
-                mHandler.sendMessage(Message.obtain(null, MSG_BATTERY, characteristic));
+                if(bState != 1){
+                    mHandler.sendMessage(Message.obtain(null, MSG_BATTERY, characteristic));
+                }
+                bState = 1;
+            }
+            if (PRESSURE_RANGE_DATA_CHAR.equals(characteristic.getUuid())) {
+                if(pRState != 1){
+                    mHandler.sendMessage(Message.obtain(null, MSG_PRESS_R, characteristic));
+                }
+                pRState = 1;
+            }
+            if (MODEL_NUM.equals(characteristic.getUuid())) {
+                if(mNState != 1){
+                    mHandler.sendMessage(Message.obtain(null, MSG_MODEL_NUM, characteristic));
+                }
+                mNState = 1;
+            }
+            if (PRESSURE_UNITS.equals(characteristic.getUuid())) {
+                if(pUState != 1){
+                    mHandler.sendMessage(Message.obtain(null, MSG_PRESS_UNITS, characteristic));
+                }
+                pUState = 1;
             }
             if (PRESSURE_DATA_CHAR.equals(characteristic.getUuid())) {
                 mHandler.sendMessage(Message.obtain(null, MSG_PRESSURE, characteristic));
             }
             if (TEMPERATURE_DATA_CHAR.equals(characteristic.getUuid())) {
                 mHandler.sendMessage(Message.obtain(null, MSG_TEMP, characteristic));
-            }
-            if (PRESSURE_RANGE_DATA_CHAR.equals(characteristic.getUuid())) {
-                mHandler.sendMessage(Message.obtain(null, MSG_PRESS_R, characteristic));
             }
 
             //After reading the initial value, next we enable notifications
@@ -488,17 +505,14 @@ public class DeviceControlActivity extends Activity {
              * After notifications are enabled, all updates from the device on characteristic
              * value changes will be posted here.  Similar to read, we hand these up to the
              * UI thread to update the display.
-
-            if (BATTERY_DATA_CHAR.equals(characteristic.getUuid())) {
-                mHandler.sendMessage(Message.obtain(null, MSG_BATTERY, characteristic));
-            }*/
+            */
             if (PRESSURE_DATA_CHAR.equals(characteristic.getUuid())) {
                 mHandler.sendMessage(Message.obtain(null, MSG_PRESSURE, characteristic));
-                Log.d(TAG, "Pressure Update Received...");
+                //Log.d(TAG, "Pressure Update Received...");
             }
             if (TEMPERATURE_DATA_CHAR.equals(characteristic.getUuid())) {
                 mHandler.sendMessage(Message.obtain(null, MSG_TEMP, characteristic));
-                Log.d(TAG, "Temperature Update Received...");
+                //Log.d(TAG, "Temperature Update Received...");
             }
         }
 
@@ -542,6 +556,8 @@ public class DeviceControlActivity extends Activity {
     private static final int MSG_PRESSURE = 102;
     private static final int MSG_TEMP = 103;
     private static final int MSG_PRESS_R = 104;
+    private static final int MSG_MODEL_NUM = 105;
+    private static final int MSG_PRESS_UNITS = 106;
     private static final int MSG_PROGRESS = 201;
     private static final int MSG_DISMISS = 202;
     private static final int MSG_CLEAR = 301;
@@ -572,14 +588,23 @@ public class DeviceControlActivity extends Activity {
                         Log.w(TAG, "Error obtaining pressure R value");
                         return;
                     }
-                    setPressureR(final_pressR);
+                    mPressureR.setText(Float.toString(final_pressR) + " " + units_string);
+                    break;
+                case MSG_MODEL_NUM:
+                    characteristic = (BluetoothGattCharacteristic) msg.obj;
+                    if (characteristic.getValue() == null) {
+                        Log.w(TAG, "Error obtaining model num value");
+                        return;
+                    }
+                    mModelNum.setText(model_string);
                     break;
                 case MSG_TEMP:
                     characteristic = (BluetoothGattCharacteristic) msg.obj;
                     if (characteristic.getValue() == null) {
-                        Log.w(TAG, "Error obtaining pressure value");
+                        Log.w(TAG, "Error obtaining temp value");
                         return;
                     }
+                    mModelNum.setText(model_string);        // backup incase the msg doesnt work
                     updateTempValue(characteristic);
                     break;
                 case MSG_PROGRESS:
@@ -605,11 +630,6 @@ public class DeviceControlActivity extends Activity {
     };
 
     /* Methods to extract sensor data and update the UI */
-
-    private void setPressureR(float data){
-        mPressureR.setText(Float.toString(data));
-    }
-
     private void updateBatteryValue(BluetoothGattCharacteristic characteristic) {
         String battery = SensorTagData.extractBattery(characteristic);
         mBattery.setText(battery);
@@ -622,7 +642,7 @@ public class DeviceControlActivity extends Activity {
 
     private void updatePressureValue(BluetoothGattCharacteristic characteristic) {
         String pressure = SensorTagData.extractPressure(characteristic);
-        mPressure.setText(pressure);
+        mPressure.setText(pressure + " " +units_string);
     }
 
     private static IntentFilter makeGattUpdateIntentFilter() {

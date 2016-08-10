@@ -4,29 +4,44 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="2668474826690" >
+    timestamp="25601319976326"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="1686" />
+        duration="874" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="1323" />
     <task
         name="instant-run-transform"
-        duration="1426" />
+        duration="86" />
     <task
         name="verifier"
-        duration="706" />
+        duration="17" />
 
     <artifact
-        location="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\outputs\apk\Application-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="2668474826690" >
+    <build timestamp="25486833126928" >
         <artifact
             location="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\outputs\apk\Application-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="25568859284020"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\builds\debug\25568859284020\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="25601319976326"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Michael\AndroidStudioProjects\iDucer\Application\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
